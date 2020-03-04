@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 欢迎来到Alex wong的个人博客
+title: 欢迎来到Alex的博客
 subtitle: '没有什么大不了的事情'
 description: ''
 keywords:
@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://beipiaoyu2011.github.io
+url: https://beipiaoyu2011.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -42,7 +42,7 @@ external_link:
 filename_case: 0
 render_drafts: false
 post_asset_folder: true
-relative_link: false
+relative_link: true
 future: true
 highlight:
   enable: true
@@ -103,3 +103,9 @@ deploy:
   repo: https://github.com/beipiaoyu2011/beipiaoyu2011.github.io.git
   #分支名称
   branch: master
+
+search:
+  path: ./search.xml
+  field: post
+  content: true
+  format: html

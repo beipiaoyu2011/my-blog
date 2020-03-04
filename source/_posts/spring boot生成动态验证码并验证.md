@@ -4,7 +4,7 @@
 
 最近需要生成一个动态的验证码，在登录页面使用，并在前后端进行校验；
 
-![image-20190728183409195](assets/image-20190728183409195.png)
+![image-20190728183409195](/images/image-20190728183409195.png)
 
 [1]:
 实现原理：
@@ -197,19 +197,19 @@ public class ValidateCodeController {
 
 ### 2 前端调取接口
 
-![image-20190728191505258](assets/image-20190728191505258.png)
+![image-20190728191505258](/images/image-20190728191505258.png)
 
 结果如图：
 
-![image-20190728192207836](assets/image-20190728192207836.png)
+![image-20190728192207836](/images/image-20190728192207836.png)
 
-![image-20190728192227358](assets/image-20190728192227358.png)
+![image-20190728192227358](/images/image-20190728192227358.png)
 
 ### 3 返回 base64 字符串
 
 有时候我们不能直接返回图片，需要返回一个 json 的数据比如：
 
-![image-20190728192558243](assets/image-20190728192558243.png)
+![image-20190728192558243](/images/image-20190728192558243.png)
 
 
 
@@ -310,14 +310,14 @@ public class ValidateCodeController {
 
 调用结果：
 
-![image-20190728192558243](assets/image-20190728192558243.png)
+![image-20190728192558243](/images/image-20190728192558243.png)
 
-![image-20190728193013770](assets/image-20190728193013770.png)
+![image-20190728193013770](/images/image-20190728193013770.png)
 
 在前端页面中，只要把 `URL` 放到 `image` 的 `URL` 中，即可显示，这里不再演示。
 
 ### 3 验证验证码
 
-![image-20190728195121612](assets/image-20190728195121612.png)
+![image-20190728195121612](/images/image-20190728195121612.png)
 
-![image-20190728195058507](assets/image-20190728195058507.png)
+![image-20190728195058507](/images/image-20190728195058507.png)
