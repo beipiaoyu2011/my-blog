@@ -43,12 +43,12 @@ import static com.zz.config.ConfigConstants.getFileDir;
 @RestController
 @Configuration
 public class UploadController {
-    
+
     private static final Logger log = LoggerFactory.getLogger(Application.class);
-    
+
     @Value("${server.port}")
     private String port;
-    
+
   	//获取当前IP地址
     public String getIp() {
         InetAddress localhost = null;
@@ -60,14 +60,14 @@ public class UploadController {
         }
         return localhost.getHostAddress();
     }
-    
+
     @PostMapping(value = "/upload", consumes = {"multipart/form-data"})
     public Response upload(@RequestParam("file") MultipartFile[] files, Response response) {
         log.info("上传多个文件");
         StringBuilder builder = new StringBuilder();
         // file address
         String fileAddress ="http://"+ getIp()+ ":" + port + File.separator;
-    
+
         ArrayList<String> imgUrls = new ArrayList<String>();
         try {
             for (int i = 0; i < files.length; i++) {
@@ -106,9 +106,9 @@ public class UploadController {
 package com.zz.config;
 
 public class ConfigConstants {
-    
+
     public static String fileDir;
-    
+
     public static String getFileDir() {
         fileDir = "/Users/wz/projects/blog/uploadFile/";
         return fileDir;
@@ -222,12 +222,13 @@ uploadBtn.onchange = function (e) {
 
 区别于之前的单个`formData.append();` 这里我们可以同时`append`多个相同名字的文件二进制文件流；
 
-![image-20191123234150228](assets/image-20191123234150228-4523763.png)
 
-![image-20191123234325831](assets/image-20191123234325831.png)
+![image-20191123234150228](springboot同时上传多个图片和下载/image-20191123234150228-4523763.png)
 
-![image-20191123234358451](assets/image-20191123234358451.png)
+![image-20191123234325831](springboot同时上传多个图片和下载/image-20191123234325831.png)
 
-![image-20191123234557023](assets/image-20191123234557023.png)
+![image-20191123234358451](springboot同时上传多个图片和下载/image-20191123234358451.png)
+
+![image-20191123234557023](springboot同时上传多个图片和下载/image-20191123234557023.png)
 
 如图结果正常显示，当我们部署到服务器的时候，这个就可以当作一个web服务器供大家使用。
