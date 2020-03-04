@@ -23,16 +23,15 @@ subtitle:
 
 # 网站图标和侧边栏logo
 favicon: ./favicon.ico
-logo: ./images/ayer-side.svg
+logo: /images/ayer-side.svg
 
 # 封面配置
 # enable-是否启用封面；path-封面背景图；logo-封面logo
 
-root: ./
 
 cover:
   enable: true
-  path: ./images/cover1.jpg  # images目录下附送多张美图，可更换
+  path: /images/cover1.jpg  # images目录下附送多张美图，可更换
   logo: false #/images/ayer.svg，如果不要直接设置成false
 
 # 页面顶部进度条
@@ -40,10 +39,10 @@ progressBar: ture
 
 # 网易云音乐插件
 music:
-  enable: true
+  enable: false
   # 播放器尺寸类型(1：小尺寸、2：大尺寸)
   type: 1
-  id: 22707008  # 网易云分享的音乐ID(更换音乐请更改此配置项)
+  id: 2786666316  # 网易云分享的音乐ID(更换音乐请更改此配置项)
   autoPlay: true  # 是否开启自动播放
 
 # 文章配置
@@ -86,9 +85,9 @@ reward_type: 2
 # 打赏wording
 reward_wording: '请我喝杯咖啡吧~'
 # 支付宝二维码图片地址，跟你设置logo的方式一样。比如：/images/alipay.jpg
-alipay: ./images/alipay.jpg
+alipay: /images/alipay.jpg
 # 微信二维码图片地址
-weixin: ./images/wechat.jpg
+weixin: /images/wechat.jpg
 
 # 版权声明
 # 版权声明type设定：0-关闭版权声明； 1-文章对应的md文件里有copyright: true属性，才有版权声明； 2-所有文章均有版权声明
@@ -99,7 +98,7 @@ copyright_type: 2
 search: true
 
 # RSS订阅(先安装hexo-generator-feed插件，再去博客根目录config进行配置)
-rss: ./atom.xml
+rss: /atom.xml
 
 # 评论：1、Valine(推荐)；2、Gitalk
 
@@ -129,7 +128,7 @@ gitalk:
 # GitHub Ribbons-封面右上角的forkme
 github:
   # (关闭请设置为false)
-  url: https://github.com/Shen-Yu/hexo-theme-ayer
+  url: https://github.com/beipiaoyu2011
 
 # fancybox(仅用于相册展示，若需要可配置albums)
 fancybox: true
@@ -159,6 +158,6 @@ pageFooter: true
 
 #ICP备案信息尾部显示
 icp:
-  enable: true
+  enable: false
   url: 'http://www.beian.miit.gov.cn/' # 备案链接
   text: '浙ICP备88888888' # 备案信息

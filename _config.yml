@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 欢迎来到个人博客
+title: 欢迎来到我的个人博客
 subtitle: ''
 description: ''
 keywords:
@@ -100,6 +100,6 @@ theme: ayer
 deploy:
   type: git
   #仓库地址
-  repo: https://github.com/beipiaoyu2011/wind.github.io
+  repo: https://github.com/beipiaoyu2011/beipiaoyu2011.github.io.git
   #分支名称
   branch: master
