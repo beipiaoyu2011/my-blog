@@ -22,24 +22,25 @@ subtitle:
   showCursor: true  # 是否显示光标
 
 # 网站图标和侧边栏logo
-favicon: /favicon.ico
-logo: /images/ayer-side.svg
+favicon: ./favicon.ico
+logo: ./images/ayer-side.svg
 
 # 封面配置
 # enable-是否启用封面；path-封面背景图；logo-封面logo
 
+root: ./
 
 cover:
   enable: true
-  path: /images/cover1.jpg  # images目录下附送多张美图，可更换
+  path: ./images/cover1.jpg  # images目录下附送多张美图，可更换
   logo: false #/images/ayer.svg，如果不要直接设置成false
 
-# 页面顶部进度条  
+# 页面顶部进度条
 progressBar: ture
 
 # 网易云音乐插件
 music:
-  enable: false
+  enable: true
   # 播放器尺寸类型(1：小尺寸、2：大尺寸)
   type: 1
   id: 22707008  # 网易云分享的音乐ID(更换音乐请更改此配置项)
@@ -52,7 +53,7 @@ excerpt_link: 阅读更多...
 excerpt_all: false
 
 # 是否开启文章分享按钮
-share_enable: true
+share_enable: false
 # 国内的社交平台(If you are not in China, maybe you prefer to set:false)
 share_china: true
 # 文章分享文字
@@ -85,9 +86,9 @@ reward_type: 2
 # 打赏wording
 reward_wording: '请我喝杯咖啡吧~'
 # 支付宝二维码图片地址，跟你设置logo的方式一样。比如：/images/alipay.jpg
-alipay: /images/alipay.jpg
+alipay: ./images/alipay.jpg
 # 微信二维码图片地址
-weixin: /images/wechat.jpg
+weixin: ./images/wechat.jpg
 
 # 版权声明
 # 版权声明type设定：0-关闭版权声明； 1-文章对应的md文件里有copyright: true属性，才有版权声明； 2-所有文章均有版权声明
@@ -98,13 +99,13 @@ copyright_type: 2
 search: true
 
 # RSS订阅(先安装hexo-generator-feed插件，再去博客根目录config进行配置)
-rss: /atom.xml
+rss: ./atom.xml
 
 # 评论：1、Valine(推荐)；2、Gitalk
 
 # 1、Valine[一款快速、简洁且高效的无后端评论系统](https://github.com/xCss/Valine)
 # 启用Valine必须先创建leancloud应用， 获取 id|key 填入即可
-leancloud:  
+leancloud:
   enable: true
   app_id: #
   app_key: #
@@ -126,7 +127,7 @@ gitalk:
   admin: # GitHub ID
 
 # GitHub Ribbons-封面右上角的forkme
-github: 
+github:
   # (关闭请设置为false)
   url: https://github.com/Shen-Yu/hexo-theme-ayer
 
@@ -139,7 +140,7 @@ busuanzi:
 
 # 友盟cnzz统计(url填js代码src链接)
 cnzz:
-  enable: true
+  enable: false
   url: https://s9.cnzz.com/z_stat.php?id=1278069914&web_id=1278069914
 
 # Google Analytics
@@ -151,13 +152,13 @@ baidu_analytics: ''
 mathjax: false
 
 # 网站成立年份(默认为 2019，若填入年份小于当前年份，则显示为 2018-2019 类似的格式)
-since: 2015
+since: 2020
 
 # 是否显示页脚信息(建议保留，有助于本主题的推广)
 pageFooter: true
 
 #ICP备案信息尾部显示
 icp:
-  enable: false
+  enable: true
   url: 'http://www.beian.miit.gov.cn/' # 备案链接
   text: '浙ICP备88888888' # 备案信息

@@ -86,7 +86,7 @@ pagination_dir: page
 
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
-include: source/_posts/assets/*
+include:
 exclude:
 ignore:
 
@@ -98,4 +98,8 @@ theme: ayer
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: ''
+  type: git
+  #仓库地址
+  repo: https://github.com/beipiaoyu2011/wind.github.io
+  #分支名称
+  branch: master
