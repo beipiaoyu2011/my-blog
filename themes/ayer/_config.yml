@@ -4,8 +4,6 @@ menu:
   归档: /archives
   分类: /categories
   标签: /tags
-  旅行: /tags/旅行/
-  摄影: http://shenyu-vip.lofter.com
   关于我: /2019/about
 
 # 站点次标题和打字动效
@@ -18,12 +16,12 @@ subtitle:
   startDelay: 0   # 延迟时间
   typeSpeed: 200  # 打字速度
   loop: true  # 是否循环
-  backSpeed: 100  # 回退速度
+  backSpeed: 300  # 回退速度
   showCursor: true  # 是否显示光标
 
 # 网站图标和侧边栏logo
 favicon: /favicon.ico
-logo: /images/ayer-side.svg
+logo: /images/logo.png
 
 # 封面配置
 # enable-是否启用封面；path-封面背景图；logo-封面logo
@@ -31,7 +29,7 @@ logo: /images/ayer-side.svg
 
 cover:
   enable: true
-  path: /images/cover1.jpg  # images目录下附送多张美图，可更换
+  path: /images/cover4.jpg  # images目录下附送多张美图，可更换
   logo: false #/images/ayer.svg，如果不要直接设置成false
 
 # 页面顶部进度条
