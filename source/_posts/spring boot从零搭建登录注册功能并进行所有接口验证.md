@@ -12,6 +12,7 @@
 
 首先我们使用IDEA自带的初始化项目功能，创建一个Spring boot项目，如图：
 
+
 ![image-20191207125203878](./assets/image-20191207125203878.png)
 
 或者在线生成，[点击进入](https://start.spring.io/)
