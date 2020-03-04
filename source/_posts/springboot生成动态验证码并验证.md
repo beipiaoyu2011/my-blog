@@ -6,6 +6,7 @@
 
 ![image-20190728183409195](assets/image-20190728183409195.png)
 
+[1]:
 实现原理：
 
 > 后端生成动态二维码，存储在 session 里面；
@@ -38,40 +39,40 @@ import java.util.Random;
 
 //  生成随机验证码
 public class ValidateCode {
-    
+
     private static Random random = new Random();
     private int width = 160;// 宽
     private int height = 40;// 高
     private int lineSize = 30;// 干扰线数量
     private int stringNum = 4;//随机产生字符的个数
-    
+
     private String randomString = "0123456789abcdefghijklmnopqrstuvwxyz";
-    
+
     private final String sessionKey = "RANDOMKEY";
-    
-    
+
+
     /*
      *  获取字体
      */
     private Font getFont() {
         return new Font("Times New Roman", Font.ROMAN_BASELINE, 40);
     }
-    
+
     /*
      *  获取颜色
      */
     private static Color getRandomColor(int fc, int bc) {
-        
+
         fc = Math.min(fc, 255);
         bc = Math.min(bc, 255);
-        
+
         int r = fc + random.nextInt(bc - fc - 16);
         int g = fc + random.nextInt(bc - fc - 14);
         int b = fc + random.nextInt(bc - fc - 12);
-        
+
         return new Color(r, g, b);
     }
-    
+
     /*
      *  绘制干扰线
      */
@@ -82,7 +83,7 @@ public class ValidateCode {
         int yl = random.nextInt(10);
         g.drawLine(x, y, x + xl, y + yl);
     }
-    
+
     /*
      *  获取随机字符
      */
@@ -90,7 +91,7 @@ public class ValidateCode {
         num = num > 0 ? num : randomString.length();
         return String.valueOf(randomString.charAt(random.nextInt(num)));
     }
-    
+
     /*
      *  绘制字符串
      */
@@ -104,7 +105,7 @@ public class ValidateCode {
         g.drawString(rand, 40 * i + 10, 25);
         return randomStr;
     }
-    
+
     /*
      *  生成随机图片
      */
@@ -116,35 +117,35 @@ public class ValidateCode {
         g.fillRect(0, 0, width, height);
         g.setColor(getRandomColor(105, 189));
         g.setFont(getFont());
-        
+
         // 绘制干扰线
         for (int i = 0; i < lineSize; i++) {
             drawLine(g);
         }
-        
+
         // 绘制随机字符
         String random_string = "";
         for (int i = 0; i < stringNum; i++) {
             random_string = drawString(g, random_string, i);
         }
-        
+
         System.out.println(random_string);
-        
+
         g.dispose();
-        
+
         session.removeAttribute(sessionKey);
         session.setAttribute(sessionKey, random_string);
-        
+
         String base64String = "";
         try {
             //  直接返回图片
-           ImageIO.write(image, "PNG", response.getOutputStream());   
-            
+           ImageIO.write(image, "PNG", response.getOutputStream());
+
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }  
-    
+    }
+
 }
 ```
 
@@ -165,31 +166,31 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/v1/user")
 public class ValidateCodeController {
-        
-    
+
+
     // 生成验证码图片
     @RequestMapping("/getCaptchaImage")
     @ResponseBody
     public void getCaptcha(HttpServletRequest request, HttpServletResponse response) {
-        
+
         try {
-            
+
             response.setContentType("image/png");
             response.setHeader("Cache-Control", "no-cache");
             response.setHeader("Expire", "0");
             response.setHeader("Pragma", "no-cache");
-            
+
             ValidateCode validateCode = new ValidateCode();
-            
+
             // 直接返回图片
             validateCode.getRandomCodeImage(request, response);
-            
+
         } catch (Exception e) {
             System.out.println(e);
         }
-        
+
     }
-    
+
 }
 
 ```
@@ -230,25 +231,25 @@ public class ValidateCodeController {
         g.fillRect(0, 0, width, height);
         g.setColor(getRandomColor(105, 189));
         g.setFont(getFont());
-        
+
         // 绘制干扰线
         for (int i = 0; i < lineSize; i++) {
             drawLine(g);
         }
-        
+
         // 绘制随机字符
         String random_string = "";
         for (int i = 0; i < stringNum; i++) {
             random_string = drawString(g, random_string, i);
         }
-        
+
         System.out.println(random_string);
-        
+
         g.dispose();
-        
+
         session.removeAttribute(sessionKey);
         session.setAttribute(sessionKey, random_string);
-        
+
         String base64String = "";
         try {
             //  直接返回图片
@@ -256,15 +257,15 @@ public class ValidateCodeController {
             //返回 base64
             ByteArrayOutputStream bos = new ByteArrayOutputStream();
             ImageIO.write(image, "PNG", bos);
-            
+
             byte[] bytes = bos.toByteArray();
             Base64.Encoder encoder = Base64.getEncoder();
             base64String = encoder.encodeToString(bytes);
-            
+
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
+
         return base64String;
     }
 ```
@@ -276,33 +277,33 @@ public class ValidateCodeController {
     @RequestMapping("/getCaptchaBase64")
     @ResponseBody
     public Object getCaptchaBase64(HttpServletRequest request, HttpServletResponse response) {
-        
+
         Map result = new HashMap();
         Response response1 = new Response();
-        
+
         try {
-            
+
             response.setContentType("image/png");
             response.setHeader("Cache-Control", "no-cache");
             response.setHeader("Expire", "0");
             response.setHeader("Pragma", "no-cache");
-            
+
             ValidateCode validateCode = new ValidateCode();
-            
+
             // 直接返回图片
             // validateCode.getRandomCode(request, response);
-            
+
             // 返回base64
             String base64String = validateCode.getRandomCodeBase64(request, response);
             result.put("url", "data:image/png;base64," + base64String);
             result.put("message", "created successfull");
             System.out.println("test=" + result.get("url"));
             response1.setData(0, result);
-            
+
         } catch (Exception e) {
             System.out.println(e);
         }
-        
+
         return response1.getResult();
     }
 ```
@@ -320,4 +321,3 @@ public class ValidateCodeController {
 ![image-20190728195121612](assets/image-20190728195121612.png)
 
 ![image-20190728195058507](assets/image-20190728195058507.png)
-
