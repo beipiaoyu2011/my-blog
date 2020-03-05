@@ -4,7 +4,7 @@ menu:
   归档: /archives
   分类: /categories
   标签: /tags
-  关于我: /about/me
+  关于我: /about
 
 # 站点次标题和打字动效
 # https://github.com/mattboldt/typed.js
@@ -81,7 +81,7 @@ word_count:
 # 打赏type设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-所有文章均有打赏
 reward_type: 2
 # 打赏wording
-reward_wording: '请我喝杯咖啡吧~'
+reward_wording: '请我喝杯咖啡吧～～～'
 # 支付宝二维码图片地址，跟你设置logo的方式一样。比如：/images/alipay.jpg
 alipay: /images/alipay.jpg
 # 微信二维码图片地址

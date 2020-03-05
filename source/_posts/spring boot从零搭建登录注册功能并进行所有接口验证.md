@@ -2,7 +2,7 @@
 categories:
 - 技术
 tags:
-- 后端
+- spring boot
 ---
 ### spring boot从零搭建登录注册功能并进行所有接口验证
 

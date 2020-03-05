@@ -2,7 +2,7 @@
 categories:
 - 技术
 tags:
-- 后端
+- spring boot
 ---
 
 ## Spring boot 生成动态验证码并前后端校验

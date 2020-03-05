@@ -2,7 +2,7 @@
 categories:
 - 技术
 tags:
-- 后端
+- spring boot
 ---
 
 ## spring boot解决如何同时上传多个图片和下载的问题
