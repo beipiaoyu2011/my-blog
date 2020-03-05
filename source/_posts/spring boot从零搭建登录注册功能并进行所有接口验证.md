@@ -1,4 +1,10 @@
-### ![image-20191207125855636](/images/image-20191207125855636.png)spring boot从零搭建登录注册功能并进行所有接口验证
+---
+categories:
+- 技术
+tags:
+- 后端
+---
+### spring boot从零搭建登录注册功能并进行所有接口验证
 
 [TOC]
 

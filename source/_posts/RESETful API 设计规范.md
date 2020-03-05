@@ -1,3 +1,10 @@
+---
+categories:
+- 技术
+tags:
+- 后端
+---
+
 # RESETful API 设计规范
 
 [TOC]
@@ -19,38 +26,38 @@
 
 > ```
 > Status of this Memo
-> 
+>
 >    This document specifies an Internet Best Current Practices for the
 >    Internet Community, and requests discussion and suggestions for
 >    improvements.  Distribution of this memo is unlimited.
-> 
+>
 > Abstract
-> 
+>
 >    In many standards track documents several words are used to signify
 >    the requirements in the specification.  These words are often
 >    capitalized.  This document defines these words as they should be
 >    interpreted in IETF documents.  Authors who follow these guidelines
 >    should incorporate this phrase near the beginning of their document:
-> 
+>
 >       The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL
 >       NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and
 >       "OPTIONAL" in this document are to be interpreted as described in
 >       RFC 2119.
-> 
+>
 >    Note that the force of these words is modified by the requirement
 >    level of the document in which they are used.
-> 
+>
 > 1. MUST   This word, or the terms "REQUIRED" or "SHALL", mean that the
 >    definition is an absolute requirement of the specification.
-> 
+>
 > 2. MUST NOT   This phrase, or the phrase "SHALL NOT", mean that the
 >    definition is an absolute prohibition of the specification.
-> 
+>
 > 3. SHOULD   This word, or the adjective "RECOMMENDED", mean that there
 >    may exist valid reasons in particular circumstances to ignore a
 >    particular item, but the full implications must be understood and
 >    carefully weighed before choosing a different course.
-> 
+>
 > 4. SHOULD NOT   This phrase, or the phrase "NOT RECOMMENDED" mean that
 >    there may exist valid reasons in particular circumstances when the
 >    particular behavior is acceptable or even useful, but the full
@@ -742,4 +749,3 @@ Connection: keep-alive
 ```
 
 其他 `HTTP` 状态码请参考 [HTTP 状态码- 维基百科](https://zh.wikipedia.org/zh-hans/HTTP状态码)。
-
