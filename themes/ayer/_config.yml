@@ -4,7 +4,7 @@ menu:
   归档: /archives
   分类: /categories
   标签: /tags
-  关于我: /2019/about
+  关于我: /about/me
 
 # 站点次标题和打字动效
 # https://github.com/mattboldt/typed.js
@@ -146,7 +146,7 @@ google_analytics: ''
 baidu_analytics: ''
 
 # 数学公式
-mathjax: false
+mathjax: true
 
 # 网站成立年份(默认为 2019，若填入年份小于当前年份，则显示为 2018-2019 类似的格式)
 since: 2020
@@ -157,5 +157,5 @@ pageFooter: true
 #ICP备案信息尾部显示
 icp:
   enable: false
-  url: 'http://www.beian.miit.gov.cn/' # 备案链接
-  text: '浙ICP备88888888' # 备案信息
+  url: 'http://********/' # 备案链接
+  text: '88888888' # 备案信息

@@ -4,7 +4,7 @@
 
 # Site
 title: 欢迎来到Alex的博客
-subtitle: '没有什么大不了的事情'
+subtitle: ''
 description: ''
 keywords:
 author: Alex Wong
@@ -105,7 +105,7 @@ deploy:
   branch: master
 
 search:
-  path: ./search.xml
+  path: search.xml
   field: post
   content: true
   format: html
