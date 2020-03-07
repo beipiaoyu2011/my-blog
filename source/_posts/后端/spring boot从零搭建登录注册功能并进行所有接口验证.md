@@ -2,7 +2,7 @@
 title: spring boot从零搭建登录注册功能并进行所有接口验证
 categories:
 - 后端
-— spring boot
+- spring boot
 tags:
 - spring boot
 comments: true

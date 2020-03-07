@@ -19,10 +19,6 @@ yarn add create-react-app -global
 npx create-react-app my-app
 ```
 
-文件结构目录如下：
-
-![1568105472442](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1568105472442.png)
-
 ### 2、从零配置webapck
 
 安装：

@@ -2,7 +2,7 @@
 title: spring boot解决如何同时上传多个图片和下载的问题
 categories:
 - 后端
-— spring boot
+- spring boot
 tags:
 - spring boot
 comments: true
