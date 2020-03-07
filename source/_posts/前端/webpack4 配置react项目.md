@@ -1,4 +1,14 @@
-## webpack 4 配置 React 项目，同时配置DEV和PROD环境
+---
+title: webpack4配置React项目，同时配置DEV和PROD环境
+categories:
+- 前端
+- 构建
+tags:
+- webpack
+comments: true
+date: 2019-06-06 17:01:34
+---
+## webpack4配置React项目，同时配置DEV和PROD环境
 
 [TOC]
 
@@ -177,7 +187,7 @@ resolve: {
         "@c": resolve('src/components'),
         "@less": resolve('src/less'),
         "@util": resolve('src/utils'),
-        "@assets": resolve('src/assets'),
+        "@/images": resolve('src//images'),
     },
     // 自动添加后缀
 	extensions: ['.jsx', '.js', '.less']
@@ -267,7 +277,7 @@ rules:[
 
 ```javascript
 // 去除重复的 less, 比如 common.less里面的内容
-plugins.push(new OptimizeCssAssetsPlugin({
+plugins.push(new OptimizeCss/imagesPlugin({
     assetNameRegExp: /\.css$/g,
     cssProcessor: require('cssnano'),
     cssProcessorPluginOptions: {
@@ -348,7 +358,7 @@ const {
     CleanWebpackPlugin
 } = require("clean-webpack-plugin");
 // 压缩css
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const OptimizeCss/imagesPlugin = require('optimize-css-/images-webpack-plugin');
 // notifier
 const WebpackBuildNotifierPlugin = require('webpack-build-notifier');
 
@@ -403,7 +413,7 @@ module.exports = (env, argv) => {
         }));
 
         // 去除重复的 less, 比如 common
-        plugins.push(new OptimizeCssAssetsPlugin({
+        plugins.push(new OptimizeCss/imagesPlugin({
             assetNameRegExp: /\.css$/g,
             cssProcessor: require('cssnano'),
             cssProcessorPluginOptions: {
@@ -509,7 +519,7 @@ module.exports = (env, argv) => {
                 "@c": resolve('src/components'),
                 "@less": resolve('src/less'),
                 "@util": resolve('src/utils'),
-                "@assets": resolve('src/assets'),
+                "@/images": resolve('src//images'),
             },
             // 自动添加后缀
             extensions: ['.jsx', '.js', '.less']

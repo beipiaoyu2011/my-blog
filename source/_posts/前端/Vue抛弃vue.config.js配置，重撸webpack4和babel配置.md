@@ -1,3 +1,13 @@
+---
+title: Vue项目改造抛弃vue-cli配置，重撸webpack4和babel配置
+categories:
+- 前端
+- Vue
+tags:
+- Vue
+comments: true
+date: 2019-06-06 17:01:34
+---
 ### Vue项目改造抛弃vue-cli配置，重撸webpack4和babel配置
 
 抛弃自带的vue.config.js的配置模式，手动使用webpack进行构建：
@@ -47,7 +57,7 @@ webpack-build-notifier
 html-webpack-plugin
 生成html入口模板
 
-optimize-css-assets-webpack-plugin
+optimize-css-/images-webpack-plugin
 css去重压缩
 
 purgecss-webpack-plugin
@@ -73,7 +83,7 @@ progress-bar-webpack-plugin
 
 >安装依赖
 ~~~bash
-yarn add -D webpack webpack-cli webpack-dev-server vue-loader babel-loader file-loader css-loader style-loader url-loader mini-css-extract-plugin  clean-webpack-plugin webpack-build-notifier html-webpack-plugin optimize-css-assets-webpack-plugin purgecss-webpack-plugin webpack-spritesmith compression-webpack-plugin webpack-bundle-analyzer
+yarn add -D webpack webpack-cli webpack-dev-server vue-loader babel-loader file-loader css-loader style-loader url-loader mini-css-extract-plugin  clean-webpack-plugin webpack-build-notifier html-webpack-plugin optimize-css-/images-webpack-plugin purgecss-webpack-plugin webpack-spritesmith compression-webpack-plugin webpack-bundle-analyzer
 ~~~
 
 #### babel 7
@@ -168,7 +178,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // clean project
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 // 压缩css
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const OptimizeCss/imagesPlugin = require('optimize-css-/images-webpack-plugin');
 // notifier
 const WebpackBuildNotifierPlugin = require('webpack-build-notifier');
 // 压缩代码
@@ -241,13 +251,13 @@ module.exports = (env, argv) => {
             new SpritesmithPlugin({
                 src: {
                     //下面的路径，根据自己的实际路径配置
-                    cwd: path.resolve(__dirname, 'src/assets/icons'),
+                    cwd: path.resolve(__dirname, 'src//images/icons'),
                     glob: '*.png'
                 },
                 // 输出雪碧图文件及样式文件
                 target: {
                     //下面的路径，根据自己的实际路径配置
-                    image: path.resolve(__dirname, 'src/assets/sprite.png'),
+                    image: path.resolve(__dirname, 'src//images/sprite.png'),
                     css: [
                         [
                             path.resolve(__dirname, 'src/less/sprite.less'),
@@ -265,7 +275,7 @@ module.exports = (env, argv) => {
                 // 样式文件中调用雪碧图地址写法
                 apiOptions: {
                     // 这个路径根据自己页面配置
-                    cssImageRef: '../assets/sprite.png'
+                    cssImageRef: './images/sprite.png'
                 },
                 spritesmithOptions: {
                     // algorithm: 'top-down'
@@ -301,7 +311,7 @@ module.exports = (env, argv) => {
 
         // 去除重复的 less, 比如 common
         plugins.push(
-            new OptimizeCssAssetsPlugin({
+            new OptimizeCss/imagesPlugin({
                 assetNameRegExp: /\.css$/g,
                 cssProcessor: require('cssnano'),
                 cssProcessorPluginOptions: {
@@ -321,7 +331,7 @@ module.exports = (env, argv) => {
         //再次压缩代码
         plugins.push(
             new CompressionWebpackPlugin({
-                deleteOriginalAssets: false,
+                deleteOriginal/images: false,
                 test: /\.(js|css|html|woff|ttf|png|jpg|jpeg)$/,
                 compressionOptions: {
                     numiterations: 15
@@ -420,7 +430,7 @@ module.exports = (env, argv) => {
                 '@c': resolve('src/components'),
                 '@less': resolve('src/less'),
                 '@util': resolve('src/utils'),
-                '@assets': resolve('src/assets'),
+                '@/images': resolve('src//images'),
                 '@pages': resolve('src/pages')
             },
             // 自动添加后缀
@@ -532,5 +542,4 @@ scripts:{
 }
 ~~~
 
-![1569495769879](assets/1569495769879.png)
-
+![1569495769879](/images/1569495769879.png)

@@ -1,10 +1,20 @@
+---
+title: window和document各种宽高计算
+categories:
+- 前端
+- 知识总结
+tags:
+- JavaScript
+comments: true
+date: 2019-06-06 17:01:34
+---
 ### window和document各种宽高计算
 
 [TOC]
 
 #### 1、盒子模型
 
-![img](./assets/box-model-standard-small.png)
+![img](/images/box-model-standard-small.png)
 
 所谓`CSS`盒子模型是：
 
@@ -36,7 +46,7 @@
 </div>
 ```
 
-![](./assets/box.jpg)
+![](/images/box.jpg)
 
 如图所示：
 
@@ -106,4 +116,3 @@ scrollTop:0;
 > `offsetwidth`:描述元素外尺寸宽度，是指 元素内容宽度+内边距宽度(左右两个)+边框(左右两个)，不包括外边距和滚动条部分。
 >
 > `offsetheight`:同理 描述元素外尺寸高度，是指 元素内容高度+内边距高度(上下两个)+边框(上下两个)，不包括外边距和滚动条部分
-
