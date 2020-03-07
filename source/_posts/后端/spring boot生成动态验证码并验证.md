@@ -1,13 +1,16 @@
 ---
+title: Spring boot 生成动态验证码并前后端校验
 categories:
-- 技术
+- 后端
+— spring boot
 tags:
 - spring boot
+comments: true
+date: 2020-03-02 17:01:34
 ---
 
 ## Spring boot 生成动态验证码并前后端校验
 
-[TOC]
 
 最近需要生成一个动态的验证码，在登录页面使用，并在前后端进行校验；
 

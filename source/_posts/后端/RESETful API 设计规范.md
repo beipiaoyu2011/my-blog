@@ -1,14 +1,15 @@
 ---
+title: RESETful API 设计规范
 categories:
-- 技术
-tags:
 - 后端
+- 接口规范
+tags:
+- API设计规范
+comments: true
+date: 2019-08-14 17:01:34
 ---
 
 # RESETful API 设计规范
-
-[TOC]
-
 
 >文章参考了目前比较常见的 `RESETful API` 设计，文档不一定十分完善，如果遗漏或者不准确，请包涵和提出意见。
 

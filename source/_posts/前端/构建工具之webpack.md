@@ -1,14 +1,14 @@
 ---
+title: 构建工具之webpack
 categories:
 - 前端
+- 构建
 tags:
 - webpack
 comments: true
 date: 2019-06-06 17:01:34
 ---
 ### 构建工具之webpack
-
-[TOC]
 
 #### 入门小试牛刀
 

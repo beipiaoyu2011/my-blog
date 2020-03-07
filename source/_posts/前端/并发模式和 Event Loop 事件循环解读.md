@@ -1,6 +1,8 @@
 ---
+title: JavaScript - 并发模式和 Event Loop 事件循环解读
 categories:
 - 前端
+- 深度
 tags:
 - JavaScript
 comments: true

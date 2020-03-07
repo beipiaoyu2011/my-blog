@@ -1,8 +1,12 @@
 ---
+title: spring boot从零搭建登录注册功能并进行所有接口验证
 categories:
-- 技术
+- 后端
+— spring boot
 tags:
 - spring boot
+comments: true
+date: 2020-03-02 17:01:34
 ---
 ### spring boot从零搭建登录注册功能并进行所有接口验证
 
