@@ -14,45 +14,45 @@ date: 2019-06-06 17:01:34
 
 一般情况，我们优先选择在 [Iconfont-阿里巴巴矢量图标库](https://www.iconfont.cn/collections/index?spm=a313x.7781069.1998910419.4&type=1) 下载我们需要的矢量icon的svg格式, 如果这里没有你需要的icon，也可以自己切图把png格式的图片转化为svg;
 
-![1571900747688](assets/1571900747688.png)
+![1571900747688](/images/1571900747688.png)
 
 #### svg 导入并生成 font
 
 网址：https://icomoon.io/app/#/select
 
-![1571898904170](assets/1571898904170.png)
+![1571898904170](/images/1571898904170.png)
 
 导入多个`svg`图片
 
-![1571898834932](assets/1571898834932.png)
+![1571898834932](/images/1571898834932.png)
 
 点击右下角
 
-![1571898949883](assets/1571898949883.png)
+![1571898949883](/images/1571898949883.png)
 
 记好每个icon的`code`
 
-![1571899023086](assets/1571899023086.png)
+![1571899023086](/images/1571899023086.png)
 
 然后点击 `download`
 
 如图：
 
-![1571899147150](assets/1571899147150.png)
+![1571899147150](/images/1571899147150.png)
 
 然后我们写 less（或者css），定义这些icon的样式：
 
 ```less
-@assets: '../assets/fonts';
+@/images: '..//images/fonts';
 @version: '?v=1.1.0';
 
 @font-face {
     font-family: 'icomoon';
     /* 自行安装第三方字体图标库 */
-    src: url('@{assets}/icomoon.eot@{version}');
-    src: url('@{assets}/icomoon.woff@{version}') format('woff'),
-    url('@{assets}/icomoon.ttf@{version}') format('truetype'),
-    url('@{assets}/icomoon.svg@{version}') format('svg');
+    src: url('@{/images}/icomoon.eot@{version}');
+    src: url('@{/images}/icomoon.woff@{version}') format('woff'),
+    url('@{/images}/icomoon.ttf@{version}') format('truetype'),
+    url('@{/images}/icomoon.svg@{version}') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -103,4 +103,4 @@ date: 2019-06-06 17:01:34
 
 实际效果：
 
-![1571900156424](assets/1571900156424.png)
+![1571900156424](/images/1571900156424.png)

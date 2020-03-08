@@ -7,6 +7,10 @@ tags:
 - spring boot
 comments: true
 date: 2020-03-02 17:01:34
+# albums: [
+#     ["/images/16ee2c228a6ffd63.png","666"],
+#     ["/images/image-20191207125203878.png","888"]
+# ]
 ---
 ### spring boot从零搭建登录注册功能并进行所有接口验证
 

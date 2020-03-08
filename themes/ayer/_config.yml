@@ -103,7 +103,7 @@ rss: /atom.xml
 # 1、Valine[一款快速、简洁且高效的无后端评论系统](https://github.com/xCss/Valine)
 # 启用Valine必须先创建leancloud应用， 获取 id|key 填入即可
 leancloud:
-  enable: true
+  enable: false
   app_id: #
   app_key: #
 # Valine配置
@@ -116,12 +116,13 @@ valine:
 
 # 2、Gitalk(https://github.com/gitalk/gitalk)
 gitalk:
-  enable: false # true
-  clientID: # GitHub Application Client ID
-  clientSecret: # Client Secret
-  repo: # Repository name
-  owner: # GitHub ID
-  admin: # GitHub ID
+  enable: true # true
+  clientID: b0601e7ea86ea740849e # GitHub Application Client ID
+  clientSecret: 65655b8141ca21e06280836d74807b7cb13a40e8 # Client Secret
+  repo: beipiaoyu2011.github.io # Repository name
+  # owner: 11400346 # GitHub ID
+  owner: 'beipiaoyu2011' # GitHub ID
+  admin: 'beipiaoyu2011' # GitHub ID
 
 # GitHub Ribbons-封面右上角的forkme
 github:
