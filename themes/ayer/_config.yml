@@ -118,11 +118,11 @@ valine:
 gitalk:
   enable: true # true
   clientID: b0601e7ea86ea740849e # GitHub Application Client ID
-  clientSecret: 65655b8141ca21e06280836d74807b7cb13a40e8 # Client Secret
+  clientSecret: 770e5195b09cf3942fc1abc2b1f7f88a1b5c13f7 # Client Secret
   repo: beipiaoyu2011.github.io # Repository name
   # owner: 11400346 # GitHub ID
-  owner: 'beipiaoyu2011' # GitHub ID
-  admin: 'beipiaoyu2011' # GitHub ID
+  owner: 'beipiaoyu2011' # GitHub name
+  admin: ['beipiaoyu2011'] # GitHub name
 
 # GitHub Ribbons-封面右上角的forkme
 github:
